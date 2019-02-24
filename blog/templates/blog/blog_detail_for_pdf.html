@@ -1,0 +1,7 @@
+{% block content %}
+    <div id="content">
+        <h1>Blog content goes here:</h1>
+        <h2>{{ post.title }}</h2>
+        <p class='postcontent' >{{ post.text|safe }}</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% block content %}
+    <div class="pdfcontent">
+        <h1>Here are the list of blog posts:</h1>
+        {% for title in post_title %}
+        <h2>{{ title }}</h2>
+        {% endfor %}
+    </div>
+{% endblock %}

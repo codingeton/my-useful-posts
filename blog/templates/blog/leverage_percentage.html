@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h1>Calculate leverage match percentage here:</h1>
+<div class="jumbotron">
+    <form action="{% url 'leverage' %}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Calculate">
+        {% if match_percentage %}
+        <h2>The match percentage is: {{match_percentage}}</h2>
+        {% endif %}
+    </form>
+</div>
+{% endblock %}
